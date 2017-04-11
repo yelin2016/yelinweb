@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .box1 {
+            height: 600px;
+            width: 960px;
+            border: 1px solid silver;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .box2{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+        .box2:before,.box2:after{
+            clear: both;
+            content: '';
+            display: block;
+        }
+        .box2>img{
+            float: left;
+        }
+        .box3{
+            position: absolute;
+            height: 30px;
+            width: 100%;
+            bottom: 10px;
+        }
+        .box3>ul{
+            list-style:none;
+            height: 100%;
+            text-align: center;
+        }
+        .box3>ul>li{
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.3);
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .box3>ul>li.select{
+            background-color: darkorange;
+        }
+        #toLeft,#toRight{
+            display: none;
+            height: 50px;
+            width: 25px;
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            background-color: rgba(0,0,0,0.4);
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        #toRight{
+            right: 10px;
+        }
+        #toLeft{
+            left: 10px;
+        }
+        #toRight:hover,#toLeft:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="box1" id="box1">
+    <div class="box2" id="box2">
+
+    </div>
+    <div class="box3" id="box3">
+        <ul></ul>
+    </div>
+    <a href="javascript:;" id="toLeft"> < </a>
+    <a href="jacascript:;" id="toRight"> > </a>
+</div>
+
+</body>
+<script src="./js/utils.js"></script>
+<script src="./js/myAnimate.js"></script>
+<script src="./js/lun.js"></script>
+</html>
